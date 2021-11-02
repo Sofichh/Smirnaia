@@ -39,18 +39,18 @@ using namespace std;
 int main()
 { 
 	int size,k=0,chislo;
-	cout << "Wwedite dlinu ocheredi" << endl;
+	cout << "Wwedite dlinu steka" << endl;
 	cin >> size;
-	Fifo och1(size);
+	Fifo stack1(size);
 	for (k=0;k<size;k++){
 	cout << "Wwedite chislo" << endl;
 	cin >> chislo;
-	och1.push(chislo,och1.i);
+	stack1.push(chislo,stack1.i);
 	}
-	och1.print();
+	stack1.print();
 	for (k=0;k<size;k++)
-	och1.pop(och1.i);
-	och1.print();
+	stack1.pop(stack1.i);
+	stack1.print();
 cin.get();
 cin.get();
 }
