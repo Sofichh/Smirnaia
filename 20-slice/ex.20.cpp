@@ -2,9 +2,7 @@
 //
 
 #include "stdafx.h"
-#include <valarray>
 #include <iostream>
-#include <math.h>
 #include "cslice.h"
 using namespace std;
 
