@@ -2,8 +2,6 @@
 #define CSLICE_H
 
 
-#include "stdafx.h"
-#include <valarray>
 #include <iostream>
 #include <math.h>
 using namespace std;
