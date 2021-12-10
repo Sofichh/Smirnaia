@@ -1,6 +1,5 @@
 #!MC 1410
-$!VarSet |LFDSFN1| = '"zsinsin.plt"'
-$!VarSet |LFDSVL1| = '"y" "x" "z"'
+$!VarSet |LFDSFN1| = '"zsinsin1.dat"'
 $!SETSTYLEBASE FACTORY
 $!PLOTOPTIONS 
   SUBDIVIDEALLCELLS = NO
@@ -43,12 +42,9 @@ $!READDATASET  '|LFDSFN1|'
   INITIALPLOTTYPE = CARTESIAN3D
   INCLUDETEXT = NO
   INCLUDEGEOM = NO
-  ASSIGNSTRANDIDS = YES
-  VARLOADMODE = BYNAME
-  VARNAMELIST = '|LFDSVL1|'
-$!REMOVEVAR |LFDSVL1|
 $!REMOVEVAR |LFDSFN1|
 $!FRAMELAYOUT 
+  SHOWBORDER = NO
   SHOWHEADER = NO
   HEADERCOLOR = RED
   XYPOS
@@ -67,13 +63,9 @@ $!GLOBALTIME
   SOLUTIONTIME = 0
 $!ACTIVEFIELDMAPS  =  [1]
 $!GLOBALRGB 
-  REDCHANNELVAR = 3
-  GREENCHANNELVAR = 3
-  BLUECHANNELVAR = 3
   RANGEMIN = 0
   RANGEMAX = 1
 $!GLOBALCONTOUR  1
-  VAR = 3
   LEGEND
     {
     SHOW = YES
@@ -90,31 +82,7 @@ $!GLOBALCONTOUR  1
       CMAX = 1
       }
     }
-$!CONTOURLEVELS NEW
-  CONTOURGROUP = 1
-  RAWDATA
-19
--0.9
--0.8
--0.7
--0.6
--0.5
--0.4
--0.3
--0.2
--0.1
-0
-0.1
-0.2
-0.3
-0.4
-0.5
-0.6
-0.7
-0.8
-0.9
 $!GLOBALCONTOUR  2
-  VAR = 3
   LEGEND
     {
     SHOW = YES
@@ -131,31 +99,7 @@ $!GLOBALCONTOUR  2
       CMAX = 1
       }
     }
-$!CONTOURLEVELS NEW
-  CONTOURGROUP = 2
-  RAWDATA
-19
--0.9
--0.8
--0.7
--0.6
--0.5
--0.4
--0.3
--0.2
--0.1
-0
-0.1
-0.2
-0.3
-0.4
-0.5
-0.6
-0.7
-0.8
-0.9
 $!GLOBALCONTOUR  3
-  VAR = 3
   LEGEND
     {
     SHOW = YES
@@ -172,31 +116,7 @@ $!GLOBALCONTOUR  3
       CMAX = 1
       }
     }
-$!CONTOURLEVELS NEW
-  CONTOURGROUP = 3
-  RAWDATA
-19
--0.9
--0.8
--0.7
--0.6
--0.5
--0.4
--0.3
--0.2
--0.1
-0
-0.1
-0.2
-0.3
-0.4
-0.5
-0.6
-0.7
-0.8
-0.9
 $!GLOBALCONTOUR  4
-  VAR = 3
   LEGEND
     {
     SHOW = YES
@@ -213,31 +133,7 @@ $!GLOBALCONTOUR  4
       CMAX = 1
       }
     }
-$!CONTOURLEVELS NEW
-  CONTOURGROUP = 4
-  RAWDATA
-19
--0.9
--0.8
--0.7
--0.6
--0.5
--0.4
--0.3
--0.2
--0.1
-0
-0.1
-0.2
-0.3
-0.4
-0.5
-0.6
-0.7
-0.8
-0.9
 $!GLOBALCONTOUR  5
-  VAR = 3
   LEGEND
     {
     SHOW = YES
@@ -254,31 +150,7 @@ $!GLOBALCONTOUR  5
       CMAX = 1
       }
     }
-$!CONTOURLEVELS NEW
-  CONTOURGROUP = 5
-  RAWDATA
-19
--0.9
--0.8
--0.7
--0.6
--0.5
--0.4
--0.3
--0.2
--0.1
-0
-0.1
-0.2
-0.3
-0.4
-0.5
-0.6
-0.7
-0.8
-0.9
 $!GLOBALCONTOUR  6
-  VAR = 3
   LEGEND
     {
     SHOW = YES
@@ -295,31 +167,7 @@ $!GLOBALCONTOUR  6
       CMAX = 1
       }
     }
-$!CONTOURLEVELS NEW
-  CONTOURGROUP = 6
-  RAWDATA
-19
--0.9
--0.8
--0.7
--0.6
--0.5
--0.4
--0.3
--0.2
--0.1
-0
-0.1
-0.2
-0.3
-0.4
-0.5
-0.6
-0.7
-0.8
-0.9
 $!GLOBALCONTOUR  7
-  VAR = 3
   LEGEND
     {
     SHOW = YES
@@ -336,31 +184,7 @@ $!GLOBALCONTOUR  7
       CMAX = 1
       }
     }
-$!CONTOURLEVELS NEW
-  CONTOURGROUP = 7
-  RAWDATA
-19
--0.9
--0.8
--0.7
--0.6
--0.5
--0.4
--0.3
--0.2
--0.1
-0
-0.1
-0.2
-0.3
-0.4
-0.5
-0.6
-0.7
-0.8
-0.9
 $!GLOBALCONTOUR  8
-  VAR = 3
   LEGEND
     {
     SHOW = YES
@@ -377,29 +201,6 @@ $!GLOBALCONTOUR  8
       CMAX = 1
       }
     }
-$!CONTOURLEVELS NEW
-  CONTOURGROUP = 8
-  RAWDATA
-19
--0.9
--0.8
--0.7
--0.6
--0.5
--0.4
--0.3
--0.2
--0.1
-0
-0.1
-0.2
-0.3
-0.4
-0.5
-0.6
-0.7
-0.8
-0.9
 $!GLOBALSCATTER 
   LEGEND
     {
@@ -438,7 +239,7 @@ $!FIELDMAP  [1]
     }
   EDGELAYER
     {
-    SHOW = NO
+    SHOW = YES
     COLOR = BLACK
     LINETHICKNESS = 0.1
     }
@@ -448,7 +249,7 @@ $!FIELDMAP  [1]
     }
   SURFACES
     {
-    SURFACESTOPLOT = NONE
+    SURFACESTOPLOT = KPLANES
     IRANGE
       {
       MAX = 1
@@ -486,6 +287,10 @@ $!THREEDAXIS
   XYDEPXTOYRATIO = 1
   DEPXTOYRATIO = 1
   DEPXTOZRATIO = 1
+  GRIDAREA
+    {
+    DRAWBORDER = YES
+    }
 $!THREEDAXIS 
   XDETAIL
     {
@@ -777,24 +582,26 @@ $!THREEDVIEW
     }
   VIEWWIDTH = 10.3854
 $!FIELDLAYERS 
-  SHOWCONTOUR = YES
+  SHOWMESH = NO
+  SHOWSHADE = YES
   SHOWEDGE = NO
 $!STREAMTRACELAYERS 
   SHOW = NO
 $!ATTACHTEXT 
   ANCHORPOS
     {
-    X = 49.99999999999997
-    Y = 92.61822376009226
+    X = 14.32141484044598
+    Y = 89.27335640138409
     }
   TEXTSHAPE
     {
     ISBOLD = NO
-    HEIGHT = 18
+    HEIGHT = 17
     }
   BOX
     {
     BOXTYPE = HOLLOW
+    MARGIN = 60
     LINETHICKNESS = 0.4
     }
   TEXT = 'z=sin(x)*sin(y)'

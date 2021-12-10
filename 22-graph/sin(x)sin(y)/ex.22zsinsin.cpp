@@ -11,7 +11,7 @@ int main()
 {
 	const double PI = 3.141592653589793238463;
 	double x[101], y[101], xx[101], yy[101], z[101][101];	
-	ofstream outf("zsinsin.txt");
+	ofstream outf("zsinsin.dat");
 	int i,p;
 	double step,k=0.0;
 	x[0]=0;
@@ -28,6 +28,9 @@ int main()
 	yy[i]=sin(k);
 	//outf << x[i] << " " << y[i] << endl;
 	}
+	outf << "TITLE = Z = F(X) * F(Y)" << endl;
+	outf << "VARIABLES = Y, X, Z" << endl;
+    outf << "ZONE T='ZONE1', I=101 J=101, F=POINT" <<endl;
 	for (p=0;p<101;p++){
 	for (i=0;i<101;i++){
 	z[p][i]=yy[p]*xx[i];
