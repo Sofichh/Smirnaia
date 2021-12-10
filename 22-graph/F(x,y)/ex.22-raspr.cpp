@@ -12,7 +12,7 @@ int main()
 {
 	const double PI = 3.141592653589793238463;
 	double x[101], y[101], z[101][101];	
-	ofstream outf("raspr.txt");
+	ofstream outf("raspr.dat");
 	int i,p;
 	double step,ox=2.0, oy=2.0, mx=3.0,my=3.0;
 	step=0.3;
@@ -22,6 +22,9 @@ int main()
 	x[i]=x[i-1]+step;
 	y[i]=y[i-1]+step;
 	}
+	outf << "TITLE = Z = F(X) * F(Y)" << endl;
+	outf << "VARIABLES = Y, X, Z" << endl;
+    outf << "ZONE T='ZONE1', I=101 J=101, F=POINT" <<endl;
 	for (p=0;p<101;p++){
 	for (i=0;i<101;i++){
 	z[p][i]=1/(ox*oy*2*PI)*exp(-pow(y[p]-my,2)/2/oy/oy)*exp(-pow(x[i]-mx,2)/2/ox/ox);
